@@ -1,4 +1,5 @@
 import requests
+import json
 
 token='416124251:AAEx4w4PWCwdCXcBIATWFItStHnsukyGTl4'
 
@@ -33,10 +34,10 @@ class BotHandler:
 
     ImdiPiemonte_bot = BotHandler(token)
     IT = ('C', 'Ubuntu', 'Python', 'APA')
-    def main():
-        new_offset = None
+def main():
+       new_offset = None
 
-        while True:
+       while True:
             ImdiPiemonte_bot.get_updates(new_offset)
 
             last_update = ImdiPiemonte_bot.get_last_update()
